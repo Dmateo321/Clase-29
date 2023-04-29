@@ -1,0 +1,59 @@
+*{
+    margin: 0; /*margen es para desde el exterior*/
+    padding: 0; /*padding es para desde el exterior*/
+    box-sizing:border-box; /*para que no se desborde*/
+}
+
+.paraver{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.titulo{
+    width: 100%; /*para que se ocupe todo el ancho*/
+    display: flex; /*para que se alinen en linea*/
+    justify-content: center; /*para que se alinen en linea*/
+    align-items: center; /*para que se alinen en linea*/
+    padding: 3px;
+    background: black; /*color de fondo*/
+    color: whitesmoke; /*color de letra*/
+}
+
+
+.conteinergrid{
+    width: 100%;
+    display: grid; /*para que se alinen en linea*/
+    grid-template-columns: repeat(3, 1fr); /*para que se alinen en linea*/
+    grid-gap: 10px; /*para que se alinen en linea*/
+    padding: 20px;
+
+    background: black; 
+    color: whitesmoke;
+}
+
+
+.itemgrid{
+    width: 100% / 3 - 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.conteinerinformation{
+    width: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+.conteinergrid {
+    grid-template-columns: repeat (2, 1fr);
+}    
+}
